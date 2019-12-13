@@ -7,6 +7,13 @@ class Word
 
   def word_test
     puts @word_input1
-
+    if @word_input1.length() == @word_input2.length()
+      word1 = @word_input1.chars.sort.join
+      word2 = @word_input2.chars.sort.join
+      if word1 == word2
+        final_answer = "These words are anagrams."
+      end
+    end
+    final_answer
   end
 end
