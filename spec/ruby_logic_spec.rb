@@ -19,4 +19,9 @@ describe('Word#word_test') do
     expect(vowel_finder.word_test).to(eq("You need to input actual words"))
   end
 
+  it('will return a message telling the user it is not an anagram but a antigram') do
+    antigram = Word.new("abcd", "efgh")
+    expect(antigram.word_test).to(eq("These words have no letter matches and are antigrams."))
+  end
+
 end
