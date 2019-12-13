@@ -6,7 +6,6 @@ class Word
   end
 
   def word_test
-    puts @word_input1
     if @word_input1.length() == @word_input2.length()
       word1 = @word_input1.chars.sort.join
       word2 = @word_input2.chars.sort.join
