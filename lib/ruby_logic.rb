@@ -14,12 +14,16 @@ class Word
       else
         word11 = word1.split("")
         word22 = word2.split("")
-        if (word22 - word11).empty? && (word11 - word22).empty?
-          puts word11
-          puts word22
-          final_answer = "These words have no letter matches and are antigrams."
-        else
+        antigram_counter = []
+        word11.each do |letter1|
+          if word22.include?(letter1)
+            antigram_counter.push("bad")
+          end
+        end
+        if antigram_counter.include?("bad")
           final_answer = "You have two words that are neither anagrams or antigrams"
+        else
+          final_answer = "These words have no letter matches and are antigrams."
         end
       end
     else
