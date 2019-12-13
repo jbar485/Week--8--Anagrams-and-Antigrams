@@ -1,23 +1,20 @@
 class Anagram
   attr_reader(:word_input1, :word_input2)
   def initialize(word_input1, word_input2)
-    @word_input1 = word_input1.downcase()
-    @word_input2 = word_input2.downcase()
+    @word_input1 = word_input1.downcase().chars.sort.join.delete(" ")
+    @word_input2 = word_input2.downcase().chars.sort.join.delete(" ")
   end
 
   def word_test
-    word1 = @word_input1.chars.sort.join.delete(" ")
-    word2 = @word_input2.chars.sort.join.delete(" ")
-    puts word1
-    if word1 =~ /[aeiou]/ && word2 =~ /[aeiou]/
-      if word1 === word2
+    if @word_input1 =~ /[aeiou]/ && @word_input2 =~ /[aeiou]/
+      if @word_input1 === @word_input2
         final_answer = "These words when compared are anagrams."
       else
-        word11 = word1.split("")
-        word22 = word2.split("")
+        word1_array = @word_input1.split("")
+        word2_array = @word_input2.split("")
         antigram_counter = []
-        word11.each do |letter1|
-          if word22.include?(letter1)
+        word1_array.each do |letter1|
+          if word2_array.include?(letter1)
             antigram_counter.push("BAD")
           end
         end
