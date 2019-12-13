@@ -12,11 +12,19 @@ class Word
       if word1 === word2
         final_answer = "These words are anagrams."
       else
-        final_answer = "cool"
+        word11 = word1.split("")
+        word22 = word2.split("")
+        if [word11].any? {|word| word.include?(word22)}
+          final_answer = "You have two words that are neither anagrams or antigrams"
+        else
+          final_answer = "These words have no letter matches and are antigrams."
+        end
       end
     else
       final_answer = "You need to input actual words"
     end
+    binding.pry
+    puts final_answer
     final_answer
   end
 end
