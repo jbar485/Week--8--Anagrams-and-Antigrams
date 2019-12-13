@@ -5,8 +5,6 @@ class Anagram
     @word_input2 = word_input2.downcase()
   end
 
-
-
   def word_test
     word1_array = @word_input1.split(" ")
     word2_array = @word_input2.split(" ")
