@@ -20,7 +20,7 @@ _First, what are anagrams, they are two words if they contain the exact same let
 |---|---|---|
 | If the word is an anagram | User inputs: "ruby" and "bury" | Output: "These words are anagrams." |
 | If the word has different casing it is still an anagram | User enters: "Tea" and "Eat" | Output: "These words are anagrams." |
-| Check if the words they are comparing are real words containing (a, e, i, o, u, y) | User inputs: "yrrb" and "ruby" | Outputs: "These words have no letter matches and are antigrams." |
+| Check if the words they are comparing are real words containing (a, e, i, o, u, y) | User inputs: "yrrb" and "ruby" | Outputs: "You need to input actual words!" |
 | If the word is not an anagram, program will check to see if it is an antigram | User inputs: "yrrb" and "ruby" | Outputs: "These words have no letter matches and are antigrams." |
 | The program will acount for sentences and tell you whether or not they are anagrams or antigrams | User inputs: "Hello how are you" and "I am doing great" | Outputs: "You have 4 antigrams" |
 

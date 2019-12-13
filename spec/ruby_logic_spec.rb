@@ -14,4 +14,9 @@ describe('Word#word_test') do
     expect(anagram.word_test).to(eq("These words are anagrams."))
   end
 
+  it('will return a message telling user they need to enter a real word') do
+    vowel = Word.new("rrrb", "bUry")
+    expect(vowel.word_test).to(eq("You need to input actual words!"))
+  end
+
 end
