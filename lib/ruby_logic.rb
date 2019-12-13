@@ -9,6 +9,7 @@ class Anagram
     word1_array = @word_input1.split(" ")
     word2_array = @word_input2.split(" ")
     final = []
+    final_answer = ""
     if word1_array.length() == word2_array.length()
       word1_array.each do |array_one|
         word2_array.each do |array_two|
@@ -40,6 +41,16 @@ class Anagram
     else
       final.push("Enter the same amount of words per sentence.")
     end
+    options = ["These words are anagrams.", "You have two words that are neither anagrams or antigrams", "These words have no letter matches and are antigrams.", "You need to input actual words", "Enter the same amount of words per sentence."]
+    for each_word in options do
+      word_count = final.count(each_word)
+      if word_count == 1 && word_count > 0
+        final_answer = final_answer.concat("#{each_word}")
+      elsif word_count > 1
+        final_answer = final_answer.concat("#{word_count} #{each_word} ")
+      end
+    end
+    puts final
     final_answer = final.join
     final_answer
   end
