@@ -15,8 +15,8 @@ describe('Word#word_test') do
   end
 
   it('will return a message telling user they need to enter a real word') do
-    vowel = Word.new("rrrb", "bUry")
-    expect(vowel.word_test).to(eq("You need to input actual words!"))
+    vowel_finder = Word.new("rurb", "brrp")
+    expect(vowel_finder.word_test).to(eq("You need to input actual words"))
   end
 
 end

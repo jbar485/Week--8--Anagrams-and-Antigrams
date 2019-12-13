@@ -8,13 +8,14 @@ class Word
   def word_test
     word1 = @word_input1.chars.sort.join
     word2 = @word_input2.chars.sort.join
-    puts word1
-    if word1.scan(/[aeiouy]/) && word2.scan(/[aeiouy]/)
-      if word1 == word2
+    if word1 =~ /[aeiou]/ && word2 =~ /[aeiou]/
+      if word1 === word2
         final_answer = "These words are anagrams."
+      else
+        final_answer = "cool"
       end
     else
-      final_answer = "You need to input actual words!"
+      final_answer = "You need to input actual words"
     end
     final_answer
   end
