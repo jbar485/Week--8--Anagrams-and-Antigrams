@@ -17,10 +17,10 @@ class Word
         antigram_counter = []
         word11.each do |letter1|
           if word22.include?(letter1)
-            antigram_counter.push("bad")
+            antigram_counter.push("BAD")
           end
         end
-        if antigram_counter.include?("bad")
+        if antigram_counter.include?("BAD")
           final_answer = "You have two words that are neither anagrams or antigrams"
         else
           final_answer = "These words have no letter matches and are antigrams."

@@ -24,4 +24,9 @@ describe('Word#word_test') do
     expect(antigram.word_test).to(eq("These words have no letter matches and are antigrams."))
   end
 
+  it('will return a message telling the user it is not an anagram or a antigram') do
+    nothing = Word.new("cool", "pool")
+    expect(nothing.word_test).to(eq("You have two words that are neither anagrams or antigrams"))
+  end
+
 end
